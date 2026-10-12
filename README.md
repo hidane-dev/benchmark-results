@@ -37,5 +37,11 @@ volume, started only for a run and stopped afterwards, managed through Systems M
 inbound access. Its results carry no hostname, IP address, account or instance ID, user name or
 path.
 
+## License
+
+The results in this repository are licensed under [CC BY 4.0](LICENSE): use them freely, and
+credit "hidane canonical benchmark (hidane-dev/benchmark-results)" with a link when you quote
+them. hidane itself is licensed under MIT OR Apache-2.0.
+
 hidane is an independent open-source project, not affiliated with Google. Firebase and Cloud
 Firestore are trademarks of Google LLC.

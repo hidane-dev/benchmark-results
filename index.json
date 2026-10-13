@@ -1,0 +1,15 @@
+{
+  "results": [
+    {
+      "path": "results/nightly/2026/10/2026-10-13-nightly.json",
+      "kind": "nightly",
+      "timestamp": "2026-10-13T01:08:55Z",
+      "environment_revision": 1,
+      "machine": "aws-c7i-xlarge-01",
+      "stable": true,
+      "hidane": "0.4.0",
+      "hidane_commit": null,
+      "official": "1.22.0"
+    }
+  ]
+}

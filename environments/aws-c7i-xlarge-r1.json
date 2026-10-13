@@ -1,0 +1,22 @@
+{
+  "revision": 1,
+  "fingerprint": "1fd9c3b9d86def249261b6d21c6e7929c9d4bea14504e643072c4f12d55910fe",
+  "definition": {
+    "name": "aws-c7i-xlarge",
+    "instance_type": "c7i.xlarge",
+    "architecture": "x86_64",
+    "ami_id": "ami-0fa5967347d08d2df",
+    "os_image": "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server",
+    "root_volume": {
+      "type": "gp3",
+      "size_gib": 50,
+      "iops": 3000,
+      "throughput_mibps": 125,
+      "encrypted": true
+    },
+    "java_major": 21,
+    "node_major": 24,
+    "firebase_tools": "15.33.0",
+    "methodology": 1
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/hidane-dev/benchmark-results/main/metrics/schema.json",
+  "title": "hidane adoption metrics: one day's snapshot",
+  "description": "Public adoption numbers for hidane, collected once a day from public APIs (GitHub, crates.io, npm, pub.dev). Every number records the URL it came from and when it was fetched. A number no public API gives, or one that could not be loaded, is null with the reason; nothing is estimated. metrics/YYYY/MM/YYYY-MM-DD.json holds each day, metrics/latest.json the newest.",
+  "type": "object",
+  "required": ["$schema", "schema_version", "date", "generated_at", "github", "crates_io", "npm", "pub_dev", "container_images", "homebrew", "adopters"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "const": "https://raw.githubusercontent.com/hidane-dev/benchmark-results/main/metrics/schema.json" },
+    "schema_version": { "const": 1 },
+    "date": { "description": "The UTC day the snapshot was taken.", "$ref": "#/$defs/day" },
+    "generated_at": { "description": "When the collection started (UTC).", "$ref": "#/$defs/time" },
+    "github": {
+      "description": "GitHub repositories, by owner/name.",
+      "type": "object",
+      "propertyNames": { "pattern": "^[A-Za-z0-9-]{1,39}/[A-Za-z0-9._-]{1,100}$" },
+      "additionalProperties": { "$ref": "#/$defs/github_repository" }
+    },
+    "crates_io": {
+      "description": "Crates on crates.io, by name.",
+      "type": "object",
+      "propertyNames": { "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$" },
+      "additionalProperties": { "$ref": "#/$defs/crate" }
+    },
+    "npm": {
+      "description": "npm packages, by name.",
+      "type": "object",
+      "propertyNames": { "pattern": "^(@[a-z0-9][a-z0-9._-]{0,213}/)?[a-z0-9][a-z0-9._-]{0,213}$" },
+      "additionalProperties": { "$ref": "#/$defs/npm_package" }
+    },
+    "pub_dev": {
+      "description": "Dart packages on pub.dev, by name.",
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z][a-z0-9_]{0,63}$" },
+      "additionalProperties": { "$ref": "#/$defs/pub_package" }
+    },
+    "container_images": {
+      "description": "Container images, by registry/owner/name.",
+      "type": "object",
+      "propertyNames": { "pattern": "^ghcr\\.io/[a-z0-9-]{1,39}/[a-z0-9._-]{1,100}$" },
+      "additionalProperties": { "$ref": "#/$defs/container_image" }
+    },
+    "homebrew": {
+      "description": "Homebrew formulae, by tap/name.",
+      "type": "object",
+      "propertyNames": { "pattern": "^[A-Za-z0-9-]{1,39}/[A-Za-z0-9-]{1,100}/[A-Za-z0-9@._+-]{1,100}$" },
+      "additionalProperties": { "$ref": "#/$defs/homebrew_formula" }
+    },
+    "adopters": {
+      "description": "Reserved for the organizations and projects listed in hidane's ADOPTERS data (including Testcontainers users), once its format is published.",
+      "$ref": "#/$defs/missing"
+    }
+  },
+  "$defs": {
+    "day": { "type": "string", "format": "date" },
+    "time": { "type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$" },
+    "source": { "description": "The URL the number was read from (a public API).", "type": "string", "format": "uri", "pattern": "^https://" },
+    "count": { "type": "integer", "minimum": 0 },
+    "period": {
+      "description": "The days (UTC, both included) a windowed count covers, as the registry reports them.",
+      "type": "object",
+      "required": ["start", "end"],
+      "additionalProperties": false,
+      "properties": { "start": { "$ref": "#/$defs/day" }, "end": { "$ref": "#/$defs/day" } }
+    },
+    "missing": {
+      "description": "No number, and why. source and fetched_at are set when a request was made but failed or answered something unexpected, and null when no public API gives the number.",
+      "type": "object",
+      "required": ["value", "reason", "source", "fetched_at"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "null" },
+        "reason": { "type": "string", "minLength": 1 },
+        "source": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/source" }] },
+        "fetched_at": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/time" }] }
+      }
+    },
+    "count_observation": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["value", "source", "fetched_at"],
+          "additionalProperties": false,
+          "properties": { "value": { "$ref": "#/$defs/count" }, "source": { "$ref": "#/$defs/source" }, "fetched_at": { "$ref": "#/$defs/time" } }
+        },
+        { "$ref": "#/$defs/missing" }
+      ]
+    },
+    "windowed_count_observation": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["value", "period", "source", "fetched_at"],
+          "additionalProperties": false,
+          "properties": {
+            "value": { "$ref": "#/$defs/count" },
+            "period": { "$ref": "#/$defs/period" },
+            "source": { "$ref": "#/$defs/source" },
+            "fetched_at": { "$ref": "#/$defs/time" }
+          }
+        },
+        { "$ref": "#/$defs/missing" }
+      ]
+    },
+    "release_downloads_observation": {
+      "description": "Download counts of the release assets, as GitHub reports them: every download, including those by CI, installers, launchers and Homebrew. archive_downloads counts the binary archives (.tar.gz, .tgz, .tar.xz, .zip), not the checksum files fetched to verify them.",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["value", "source", "fetched_at"],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "object",
+              "required": ["archive_downloads", "releases"],
+              "additionalProperties": false,
+              "properties": {
+                "archive_downloads": { "$ref": "#/$defs/count" },
+                "releases": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["tag", "published_at", "prerelease", "archive_downloads", "assets"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "tag": { "type": "string", "pattern": "^v?\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]{1,40})?$" },
+                      "published_at": { "$ref": "#/$defs/time" },
+                      "prerelease": { "type": "boolean" },
+                      "archive_downloads": { "$ref": "#/$defs/count" },
+                      "assets": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["name", "downloads"],
+                          "additionalProperties": false,
+                          "properties": {
+                            "name": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,127}$" },
+                            "downloads": { "$ref": "#/$defs/count" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "source": { "$ref": "#/$defs/source" },
+            "fetched_at": { "$ref": "#/$defs/time" }
+          }
+        },
+        { "$ref": "#/$defs/missing" }
+      ]
+    },
+    "github_repository": {
+      "type": "object",
+      "required": ["stars", "forks", "watchers"],
+      "additionalProperties": false,
+      "properties": {
+        "stars": { "$ref": "#/$defs/count_observation" },
+        "forks": { "$ref": "#/$defs/count_observation" },
+        "watchers": { "description": "Users watching the repository (GitHub's subscribers_count).", "$ref": "#/$defs/count_observation" },
+        "release_downloads": { "$ref": "#/$defs/release_downloads_observation" },
+        "dependents": { "$ref": "#/$defs/missing" },
+        "workflow_usage": { "description": "For a GitHub Action: the workflows that use it.", "$ref": "#/$defs/missing" }
+      }
+    },
+    "crate": {
+      "type": "object",
+      "required": ["downloads_total", "downloads_last_90_days"],
+      "additionalProperties": false,
+      "properties": {
+        "downloads_total": { "$ref": "#/$defs/count_observation" },
+        "downloads_last_90_days": { "description": "crates.io's recent_downloads.", "$ref": "#/$defs/count_observation" }
+      }
+    },
+    "npm_package": {
+      "description": "From npm's per-day counts for the last 30 days it has counted (the newest day lags the snapshot by a day or two).",
+      "type": "object",
+      "required": ["downloads_last_day", "downloads_last_7_days", "downloads_last_30_days"],
+      "additionalProperties": false,
+      "properties": {
+        "downloads_last_day": { "$ref": "#/$defs/windowed_count_observation" },
+        "downloads_last_7_days": { "$ref": "#/$defs/windowed_count_observation" },
+        "downloads_last_30_days": { "$ref": "#/$defs/windowed_count_observation" }
+      }
+    },
+    "pub_package": {
+      "type": "object",
+      "required": ["downloads_last_30_days", "likes", "pub_points", "pub_points_max"],
+      "additionalProperties": false,
+      "properties": {
+        "downloads_last_30_days": { "description": "pub.dev's downloadCount30Days.", "$ref": "#/$defs/count_observation" },
+        "likes": { "$ref": "#/$defs/count_observation" },
+        "pub_points": { "$ref": "#/$defs/count_observation" },
+        "pub_points_max": { "$ref": "#/$defs/count_observation" }
+      }
+    },
+    "container_image": {
+      "type": "object",
+      "required": ["pulls"],
+      "additionalProperties": false,
+      "properties": { "pulls": { "$ref": "#/$defs/missing" } }
+    },
+    "homebrew_formula": {
+      "type": "object",
+      "required": ["installs"],
+      "additionalProperties": false,
+      "properties": { "installs": { "$ref": "#/$defs/missing" } }
+    }
+  }
+}

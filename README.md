@@ -8,7 +8,9 @@ published binary).
 The numbers hidane's README and release notes quote come from the **release** results here, and
 each quote names the result it comes from. Nothing here is a single best run: every metric keeps
 its raw samples and their median, p95, minimum, maximum, mean and standard deviation, and
-comparisons use medians.
+comparisons use medians. Measurements are never edited after publication; the rare correction
+(a commit a run failed to record, for example) is listed in [PROVENANCE.md](PROVENANCE.md) with
+the evidence behind it.
 
 ## Layout
 
@@ -18,6 +20,7 @@ comparisons use medians.
 | `results/nightly/YYYY/MM/` | Nightly results: a `.json` and the `.md` rendered from it |
 | `results/release/YYYY/MM/` | Release results |
 | `index.json` | Every result, with its kind, time, environment revision, hidane version and commit, official emulator version, and whether its environment was stable |
+| `PROVENANCE.md` | What each result traces to (commits, versions, environment), and every correction made to a published result, with its evidence |
 | `metrics/YYYY/MM/YYYY-MM-DD.json` | Adoption metrics: one snapshot a day (see below) |
 | `metrics/latest.json`, `metrics/schema.json` | The newest snapshot, and the JSON Schema of every snapshot |
 

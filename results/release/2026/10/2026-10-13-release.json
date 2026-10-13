@@ -274,7 +274,7 @@
     },
     "hidane": {
       "version": "0.4.0",
-      "git_commit": null,
+      "git_commit": "8a8106248ecb80b27936f07c49db674ae10cc6bd",
       "git_dirty": null,
       "build_profile": null,
       "binary_sha256": "c634adbbe93126b48ba702644af4f6742af611e040ed8285fcb592ecfbbc77af",

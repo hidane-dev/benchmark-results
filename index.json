@@ -4,22 +4,39 @@
       "path": "results/nightly/2026/10/2026-10-13-nightly.json",
       "kind": "nightly",
       "timestamp": "2026-10-13T01:08:55Z",
+      "benchmark_version": "1",
       "environment_revision": 1,
       "machine": "aws-c7i-xlarge-01",
       "stable": true,
       "hidane": "0.4.0",
       "hidane_commit": "468f1950042bc498a8cd94b017659f3a26daf40c",
+      "engine_commit": "468f1950042bc498a8cd94b017659f3a26daf40c",
+      "official": "1.22.0"
+    },
+    {
+      "path": "results/release/2026/10/2026-10-13-release-123304.json",
+      "kind": "release",
+      "timestamp": "2026-10-13T12:33:04Z",
+      "benchmark_version": "1",
+      "environment_revision": 1,
+      "machine": "aws-c7i-xlarge-01",
+      "stable": true,
+      "hidane": "0.5.0",
+      "hidane_commit": "5ae99292c04e10907658bff040c81557f4ac6469",
+      "engine_commit": "0276cecb19b80c25f3420fe5ebab08b66384baab",
       "official": "1.22.0"
     },
     {
       "path": "results/release/2026/10/2026-10-13-release.json",
       "kind": "release",
       "timestamp": "2026-10-13T01:22:47Z",
+      "benchmark_version": "1",
       "environment_revision": 1,
       "machine": "aws-c7i-xlarge-01",
       "stable": true,
       "hidane": "0.4.0",
       "hidane_commit": "8a8106248ecb80b27936f07c49db674ae10cc6bd",
+      "engine_commit": "468f1950042bc498a8cd94b017659f3a26daf40c",
       "official": "1.22.0"
     }
   ]

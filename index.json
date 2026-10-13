@@ -8,7 +8,7 @@
       "machine": "aws-c7i-xlarge-01",
       "stable": true,
       "hidane": "0.4.0",
-      "hidane_commit": null,
+      "hidane_commit": "468f1950042bc498a8cd94b017659f3a26daf40c",
       "official": "1.22.0"
     }
   ]

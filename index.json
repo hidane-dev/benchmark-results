@@ -103,6 +103,19 @@
       "hidane_commit": "8a8106248ecb80b27936f07c49db674ae10cc6bd",
       "engine_commit": "468f1950042bc498a8cd94b017659f3a26daf40c",
       "official": "1.22.0"
+    },
+    {
+      "path": "results/release/2026/10/2026-10-15-release.json",
+      "kind": "release",
+      "timestamp": "2026-10-15T22:58:58Z",
+      "benchmark_version": "1",
+      "environment_revision": 1,
+      "machine": "aws-c7i-xlarge-01",
+      "stable": true,
+      "hidane": "0.6.0",
+      "hidane_commit": "c0615a0439c81ba001b5480596acc4e2915d59bb",
+      "engine_commit": "afca54d170aa3392baa87ec47fe7f2fe363a15ce",
+      "official": "1.22.0"
     }
   ]
 }

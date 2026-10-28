@@ -1,28 +1,28 @@
 {
   "$schema": "https://raw.githubusercontent.com/hidane-dev/benchmark-results/main/metrics/schema.json",
   "schema_version": 1,
-  "date": "2026-10-27",
-  "generated_at": "2026-10-27T12:38:25Z",
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T13:29:44Z",
   "github": {
     "hidane-dev/hidane": {
       "stars": {
         "value": 3,
         "source": "https://api.github.com/repos/hidane-dev/hidane",
-        "fetched_at": "2026-10-27T12:38:25Z"
+        "fetched_at": "2026-10-28T13:29:44Z"
       },
       "forks": {
         "value": 0,
         "source": "https://api.github.com/repos/hidane-dev/hidane",
-        "fetched_at": "2026-10-27T12:38:25Z"
+        "fetched_at": "2026-10-28T13:29:44Z"
       },
       "watchers": {
         "value": 0,
         "source": "https://api.github.com/repos/hidane-dev/hidane",
-        "fetched_at": "2026-10-27T12:38:25Z"
+        "fetched_at": "2026-10-28T13:29:44Z"
       },
       "release_downloads": {
         "value": {
-          "archive_downloads": 2871,
+          "archive_downloads": 3031,
           "releases": [
             {
               "tag": "v0.6.0",
@@ -84,7 +84,7 @@
               "tag": "v0.5.1",
               "published_at": "2026-10-13T14:55:47Z",
               "prerelease": false,
-              "archive_downloads": 1635,
+              "archive_downloads": 1795,
               "assets": [
                 {
                   "name": "hidane-0.5.1-aarch64-apple-darwin.cdx.json",
@@ -124,7 +124,7 @@
                 },
                 {
                   "name": "hidane-0.5.1-x86_64-unknown-linux-musl.tar.gz",
-                  "downloads": 1600
+                  "downloads": 1760
                 },
                 {
                   "name": "hidane-0.5.1.intoto.jsonl",
@@ -220,7 +220,7 @@
                 },
                 {
                   "name": "sha256sums.txt",
-                  "downloads": 176
+                  "downloads": 177
                 }
               ]
             },
@@ -451,7 +451,7 @@
           ]
         },
         "source": "https://api.github.com/repos/hidane-dev/hidane/releases?per_page=100",
-        "fetched_at": "2026-10-27T12:38:26Z"
+        "fetched_at": "2026-10-28T13:29:44Z"
       },
       "dependents": {
         "value": null,
@@ -464,17 +464,17 @@
       "stars": {
         "value": 0,
         "source": "https://api.github.com/repos/hidane-dev/setup-hidane",
-        "fetched_at": "2026-10-27T12:38:27Z"
+        "fetched_at": "2026-10-28T13:29:45Z"
       },
       "forks": {
         "value": 0,
         "source": "https://api.github.com/repos/hidane-dev/setup-hidane",
-        "fetched_at": "2026-10-27T12:38:27Z"
+        "fetched_at": "2026-10-28T13:29:45Z"
       },
       "watchers": {
         "value": 0,
         "source": "https://api.github.com/repos/hidane-dev/setup-hidane",
-        "fetched_at": "2026-10-27T12:38:27Z"
+        "fetched_at": "2026-10-28T13:29:45Z"
       },
       "workflow_usage": {
         "value": null,
@@ -487,250 +487,250 @@
   "crates_io": {
     "hidane": {
       "downloads_total": {
-        "value": 143,
+        "value": 146,
         "source": "https://crates.io/api/v1/crates/hidane",
-        "fetched_at": "2026-10-27T12:38:28Z"
+        "fetched_at": "2026-10-28T13:29:46Z"
       },
       "downloads_last_90_days": {
-        "value": 143,
+        "value": 146,
         "source": "https://crates.io/api/v1/crates/hidane",
-        "fetched_at": "2026-10-27T12:38:28Z"
+        "fetched_at": "2026-10-28T13:29:46Z"
       }
     },
     "hidane-core": {
       "downloads_total": {
-        "value": 177,
+        "value": 179,
         "source": "https://crates.io/api/v1/crates/hidane-core",
-        "fetched_at": "2026-10-27T12:38:28Z"
+        "fetched_at": "2026-10-28T13:29:46Z"
       },
       "downloads_last_90_days": {
-        "value": 177,
+        "value": 179,
         "source": "https://crates.io/api/v1/crates/hidane-core",
-        "fetched_at": "2026-10-27T12:38:28Z"
+        "fetched_at": "2026-10-28T13:29:46Z"
       }
     },
     "hidane-proto": {
       "downloads_total": {
-        "value": 210,
+        "value": 213,
         "source": "https://crates.io/api/v1/crates/hidane-proto",
-        "fetched_at": "2026-10-27T12:38:29Z"
+        "fetched_at": "2026-10-28T13:29:47Z"
       },
       "downloads_last_90_days": {
-        "value": 210,
+        "value": 213,
         "source": "https://crates.io/api/v1/crates/hidane-proto",
-        "fetched_at": "2026-10-27T12:38:29Z"
+        "fetched_at": "2026-10-28T13:29:47Z"
       }
     },
     "hidane-rules": {
       "downloads_total": {
-        "value": 144,
+        "value": 146,
         "source": "https://crates.io/api/v1/crates/hidane-rules",
-        "fetched_at": "2026-10-27T12:38:30Z"
+        "fetched_at": "2026-10-28T13:29:48Z"
       },
       "downloads_last_90_days": {
-        "value": 144,
+        "value": 146,
         "source": "https://crates.io/api/v1/crates/hidane-rules",
-        "fetched_at": "2026-10-27T12:38:30Z"
+        "fetched_at": "2026-10-28T13:29:48Z"
       }
     }
   },
   "npm": {
     "hidane": {
       "downloads_last_day": {
-        "value": 0,
+        "value": 154,
         "period": {
-          "start": "2026-07-01",
-          "end": "2026-07-01"
+          "start": "2026-10-26",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/hidane",
-        "fetched_at": "2026-10-27T12:38:31Z"
+        "fetched_at": "2026-10-28T13:29:49Z"
       },
       "downloads_last_7_days": {
-        "value": 0,
+        "value": 696,
         "period": {
-          "start": "2026-06-25",
-          "end": "2026-07-01"
+          "start": "2026-10-20",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/hidane",
-        "fetched_at": "2026-10-27T12:38:31Z"
+        "fetched_at": "2026-10-28T13:29:49Z"
       },
       "downloads_last_30_days": {
-        "value": 0,
+        "value": 2196,
         "period": {
-          "start": "2026-06-02",
-          "end": "2026-07-01"
+          "start": "2026-09-27",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/hidane",
-        "fetched_at": "2026-10-27T12:38:31Z"
+        "fetched_at": "2026-10-28T13:29:49Z"
       }
     },
     "@hidane-dev/darwin-arm64": {
       "downloads_last_day": {
-        "value": 0,
+        "value": 7,
         "period": {
-          "start": "2026-07-01",
-          "end": "2026-07-01"
+          "start": "2026-10-26",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/darwin-arm64",
-        "fetched_at": "2026-10-27T12:38:31Z"
+        "fetched_at": "2026-10-28T13:29:49Z"
       },
       "downloads_last_7_days": {
-        "value": 0,
+        "value": 65,
         "period": {
-          "start": "2026-06-25",
-          "end": "2026-07-01"
+          "start": "2026-10-20",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/darwin-arm64",
-        "fetched_at": "2026-10-27T12:38:31Z"
+        "fetched_at": "2026-10-28T13:29:49Z"
       },
       "downloads_last_30_days": {
-        "value": 0,
+        "value": 1312,
         "period": {
-          "start": "2026-06-02",
-          "end": "2026-07-01"
+          "start": "2026-09-27",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/darwin-arm64",
-        "fetched_at": "2026-10-27T12:38:31Z"
+        "fetched_at": "2026-10-28T13:29:49Z"
       }
     },
     "@hidane-dev/darwin-x64": {
       "downloads_last_day": {
-        "value": 0,
+        "value": 3,
         "period": {
-          "start": "2026-07-01",
-          "end": "2026-07-01"
+          "start": "2026-10-26",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/darwin-x64",
-        "fetched_at": "2026-10-27T12:38:32Z"
+        "fetched_at": "2026-10-28T13:29:51Z"
       },
       "downloads_last_7_days": {
-        "value": 0,
+        "value": 41,
         "period": {
-          "start": "2026-06-25",
-          "end": "2026-07-01"
+          "start": "2026-10-20",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/darwin-x64",
-        "fetched_at": "2026-10-27T12:38:32Z"
+        "fetched_at": "2026-10-28T13:29:51Z"
       },
       "downloads_last_30_days": {
-        "value": 0,
+        "value": 1293,
         "period": {
-          "start": "2026-06-02",
-          "end": "2026-07-01"
+          "start": "2026-09-27",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/darwin-x64",
-        "fetched_at": "2026-10-27T12:38:32Z"
+        "fetched_at": "2026-10-28T13:29:51Z"
       }
     },
     "@hidane-dev/linux-arm64": {
       "downloads_last_day": {
-        "value": 0,
+        "value": 1,
         "period": {
-          "start": "2026-07-01",
-          "end": "2026-07-01"
+          "start": "2026-10-26",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/linux-arm64",
-        "fetched_at": "2026-10-27T12:38:33Z"
+        "fetched_at": "2026-10-28T13:29:52Z"
       },
       "downloads_last_7_days": {
-        "value": 0,
+        "value": 44,
         "period": {
-          "start": "2026-06-25",
-          "end": "2026-07-01"
+          "start": "2026-10-20",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/linux-arm64",
-        "fetched_at": "2026-10-27T12:38:33Z"
+        "fetched_at": "2026-10-28T13:29:52Z"
       },
       "downloads_last_30_days": {
-        "value": 0,
+        "value": 1339,
         "period": {
-          "start": "2026-06-02",
-          "end": "2026-07-01"
+          "start": "2026-09-27",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/linux-arm64",
-        "fetched_at": "2026-10-27T12:38:33Z"
+        "fetched_at": "2026-10-28T13:29:52Z"
       }
     },
     "@hidane-dev/linux-x64": {
       "downloads_last_day": {
-        "value": 0,
+        "value": 145,
         "period": {
-          "start": "2026-07-01",
-          "end": "2026-07-01"
+          "start": "2026-10-26",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/linux-x64",
-        "fetched_at": "2026-10-27T12:38:34Z"
+        "fetched_at": "2026-10-28T13:29:53Z"
       },
       "downloads_last_7_days": {
-        "value": 0,
+        "value": 665,
         "period": {
-          "start": "2026-06-25",
-          "end": "2026-07-01"
+          "start": "2026-10-20",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/linux-x64",
-        "fetched_at": "2026-10-27T12:38:34Z"
+        "fetched_at": "2026-10-28T13:29:53Z"
       },
       "downloads_last_30_days": {
-        "value": 0,
+        "value": 2212,
         "period": {
-          "start": "2026-06-02",
-          "end": "2026-07-01"
+          "start": "2026-09-27",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/linux-x64",
-        "fetched_at": "2026-10-27T12:38:34Z"
+        "fetched_at": "2026-10-28T13:29:53Z"
       }
     },
     "@hidane-dev/win32-x64": {
       "downloads_last_day": {
-        "value": 0,
+        "value": 1,
         "period": {
-          "start": "2026-07-01",
-          "end": "2026-07-01"
+          "start": "2026-10-26",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/win32-x64",
-        "fetched_at": "2026-10-27T12:38:35Z"
+        "fetched_at": "2026-10-28T13:29:53Z"
       },
       "downloads_last_7_days": {
-        "value": 0,
+        "value": 41,
         "period": {
-          "start": "2026-06-25",
-          "end": "2026-07-01"
+          "start": "2026-10-20",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/win32-x64",
-        "fetched_at": "2026-10-27T12:38:35Z"
+        "fetched_at": "2026-10-28T13:29:53Z"
       },
       "downloads_last_30_days": {
-        "value": 0,
+        "value": 1450,
         "period": {
-          "start": "2026-06-02",
-          "end": "2026-07-01"
+          "start": "2026-09-27",
+          "end": "2026-10-26"
         },
         "source": "https://api.npmjs.org/downloads/range/last-month/@hidane-dev/win32-x64",
-        "fetched_at": "2026-10-27T12:38:35Z"
+        "fetched_at": "2026-10-28T13:29:53Z"
       }
     }
   },
   "pub_dev": {
     "hidane": {
       "downloads_last_30_days": {
-        "value": 603,
+        "value": 615,
         "source": "https://pub.dev/api/packages/hidane/score",
-        "fetched_at": "2026-10-27T12:38:36Z"
+        "fetched_at": "2026-10-28T13:29:55Z"
       },
       "likes": {
         "value": 1,
         "source": "https://pub.dev/api/packages/hidane/score",
-        "fetched_at": "2026-10-27T12:38:36Z"
+        "fetched_at": "2026-10-28T13:29:55Z"
       },
       "pub_points": {
         "value": 160,
         "source": "https://pub.dev/api/packages/hidane/score",
-        "fetched_at": "2026-10-27T12:38:36Z"
+        "fetched_at": "2026-10-28T13:29:55Z"
       },
       "pub_points_max": {
         "value": 160,
         "source": "https://pub.dev/api/packages/hidane/score",
-        "fetched_at": "2026-10-27T12:38:36Z"
+        "fetched_at": "2026-10-28T13:29:55Z"
       }
     }
   },

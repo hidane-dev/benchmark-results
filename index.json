@@ -261,6 +261,19 @@
       "official": "1.22.0"
     },
     {
+      "path": "results/nightly/2026/10/2026-10-31-nightly.json",
+      "kind": "nightly",
+      "timestamp": "2026-10-31T21:23:26Z",
+      "benchmark_version": "1",
+      "environment_revision": 1,
+      "machine": "aws-c7i-xlarge-01",
+      "stable": true,
+      "hidane": "0.6.0",
+      "hidane_commit": "2a00ef73ecd059b9a5330bf64fc52d1abdd97e68",
+      "engine_commit": "2a00ef73ecd059b9a5330bf64fc52d1abdd97e68",
+      "official": "1.22.0"
+    },
+    {
       "path": "results/release/2026/10/2026-10-13-release-123304.json",
       "kind": "release",
       "timestamp": "2026-10-13T12:33:04Z",

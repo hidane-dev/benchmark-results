@@ -404,6 +404,19 @@
       "official": "1.22.0"
     },
     {
+      "path": "results/nightly/2026/11/2026-11-12-nightly-233034.json",
+      "kind": "nightly",
+      "timestamp": "2026-11-12T23:30:34Z",
+      "benchmark_version": "1",
+      "environment_revision": 1,
+      "machine": "aws-c7i-xlarge-01",
+      "stable": true,
+      "hidane": "0.7.0",
+      "hidane_commit": "23f660e24893fe968a7374215c3d7dddb40f59f3",
+      "engine_commit": "23f660e24893fe968a7374215c3d7dddb40f59f3",
+      "official": "1.22.0"
+    },
+    {
       "path": "results/nightly/2026/11/2026-11-12-nightly.json",
       "kind": "nightly",
       "timestamp": "2026-11-12T00:30:14Z",
